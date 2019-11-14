@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Asociado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estil.css" />
+  <link rel="stylesheet" href="css/sidebar.css" />
+</head>
+<body>
+<div class="toggle" id="wrapper">   
+    <aside>
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"></li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                <li id="div_Result"></li>
+                <li><a href="segunda.html">Inicio</a></li>
+                <li><a href="perfil.html">Mi perfil </li>
+                <li><a href="mis_subastas.html">Mis ofertas</a></li>
+                <li id="subastaspublicadas" style="display:none"><a href="subastas_asociados.html">Ofertas publicadas</a></li>
+                <li><a href="#" data-role="button" id="closeapp_2">Desconectar</a></li>
+            </ul>
+        </div>
+    </aside>   
+    <header>
+            <div class="row cabecera">
+                <div class="col-8"><img class="posicionadorimg" src="img/logo_elmundoenventa.svg"  /></div>
+                <div class="col-2">
+                    <a href="professionals.html"><img class="posicionadoricono" src="img/prof.svg" /></a>
+                </div>
+                <div class="col-2">
+                        <a id="menu-toggle" href="#"><img class="posicionadoricono" src="img/bars.svg" /></a>
+                </div>
+            </div>
+    </header>     
+
+    <div class="container" id="page-content-wrapper">
+        <div class="row margensuperior cuerpo">
+            <div class="col-12"><a href="escoger_categorias.html" title="Ampliar suscripcion" data-toggle="modal" data-target="#myModale" class="link"><img src="img/minibars.svg" /> Ampliar suscripción</a></div>
+        </div>
+        <div class="row">
+            <div class="col-12 cuerpo divisores">
+                <p>Estas son las ofertas activas para las categor&iacute;as a las que se ha suscrito.</p>
+                <p>A continuaci&oacute;n ver&aacute; las distintas ofertas ordenadas seg&uacute;n vencimiento, con las posibles acciones a realizar seg&uacute;n el estado de la oferta</p>               
+            </div>
+        </div>
+            
+        
+        <div class="row">
+            <div class="col-12 cuerpo">
+                <form action="subastas_asociados.html" method="POST">
+                    <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="text-center" style="width:50px">Fecha</th>
+                                    <th class="text-center" style="width:100px">L&iacute;mite</th>
+                                    <th class="text-center"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="mostrarsubastas">
+                            </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+            <div class="row pie">
+                <div class="col-12"></div>
+            </div>
+    </footer>
+</div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/elmundo.js"></script>
+
+<script>
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("active");
+});
+</script>
+<script src="cordova.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>El mundo en venta App oficial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estil.css" />
+    <link rel="stylesheet" href="css/slidetext.css" />
+</head>
+<body> 
+<div class="logoomni">
+    <img src="img/logo_elmundoenventa.svg" alt="El mundo en venta" title="El mundo en venta" style="width:100%;" />
+</div>
+	
+<div id="wrapper">
+        <div id="mask">
+
+            <!--INICIAL-->    
+            
+            <div id="item1" class="margensuperio section"><a name="item1"></a>					
+                    <div class="flotant" id="myPageContent">	
+                        <div id="home">
+                            <div id="textSlider" class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4 iamCol">
+                                    <p>necesitas</p>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 slideCol">
+                                    <div class="scroller">
+                                        <div class="inner">
+                                            <p>comprar Un coche</p>
+                                            <p>comprar las ruedas</p>
+                                            <p>arreglar el jardín</p>
+                                            <p>una consola nueva</p>
+                                            <p>cambiarte el móvil</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">							
+                        <div class="row">
+                            <div class="col-md-12">
+                           
+                                    <form id="formulario" method="post">
+                                    <label> Usuario </label>
+                                            <input type="email"  placeholder="Escribe tu e-mail" class="form-control" id="nombredeusuario"  name="nombredeusuario">
+                                    <label> Tu contrase&ntilde;a </label>
+                                            <input type="password" id="clave" placeholder="Escribe tu contrase&ntilde;a"  class="form-control"   name="clave" >
+                                        <div class="row">
+                                            <div class="col-6 text-center">
+                                                <button class="btn btn-default botontrans" type="submit"  value="Login" id="botonLogin">Conectar</button>
+                                            </div>
+                                            <div class="col-6 text-center"><a href="#item2" class="btn  btn-default botontrans panel">Inscribirse</a></div>
+                                        </div>     
+                                    </form>
+                                </div>
+             
+                        </div> 
+                        <div class="row">			 		
+                            <div class="col-md-12 bnjp" align="center"><a href="#item3" class="panel sombreado">No recuerdo mi contrase&ntilde;a</a></div>
+                        </div>
+                    </div>
+            </div>
+            <!--end INICIAL-->	
+		
+<!--ALTA-->	
+		<div id="item2" class="margensuperiose section"><a name="item2"></a>
+		    <div class="container">
+			    <div class="row">
+				    <div class="col-12">
+				        <div id="register_form">
+				        <form name="register" method="post" action="" class="form-horizontal">
+                            <fieldset>
+                            <legend><div id="descripcion_alta" class="white">Necesitamos que nos facilites algunos datos...</div></legend>
+                            
+                            <div class="row">
+                                <div class="col-12">
+                                <input id="nom" name="nom" type="text" placeholder="Escribe tu nombre" class="form-control input-md">
+                                    <label class="error" for="nom" id="nom_error">Deberias indicar tu nombre, te llamaremos cuando se acepte tu oferta</label></p>
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="row">
+                                <div class="col-12">
+                                <input id="cognom" name="cognom" type="text" placeholder="Escribe tus apellidos" class="form-control input-md">
+                                        <label class="error" for="cognom" id="cognom_error">Deberias indicar tus apellidos, te llamaremos cuando se acepte tu oferta</label></p>		
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="row">
+                                <div class="col-12">
+                                <input id="telefon" name="telefon" type="text" placeholder="Escribe tu teléfono" class="form-control input-md">
+                                        <label class="error" for="telefon" id="telefon_error">Necesitamos tener un tel&eacute;fono de contacto, te llamaremos cuando se acepte tu oferta</label></p>		
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="row"> 
+                                <div class="col-12">
+                                <input id="email" name="email" type="text" placeholder="Escribe tu e-mail" class="form-control input-md">
+                                        <label class="error" for="name" id="name_error">Debes indicarnos un E-mail v&aacute;lido, ser&aacute; tu c&oacute;digo de usuario para acceder a la aplicaci&oacute;n y donde te mandaremos las notificaciones</label></p>
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="row">
+                                <div class="col-12">  
+                                    <label class=" control-label" for="password">Contraseña</label>  
+                                        <input id="password" name="password" type="text" placeholder="Elige una contraseña" class="form-control input-md">
+                                        <label class="error" for="password" id="pass_error">Por favor, indica una contrase&ntilde;a para podert conectar otro d&iacute;a a esta aplicaci&oacute;n</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12"> 
+                                    <label class="control-label" for="password2">Coincidencia</label>  
+                                    <input id="password2" name="password2" type="text" placeholder="Repite la contraseña" class="form-control input-md">
+                                        <label class="error" for="password2"  id="pass_error2">Escriba exactamente la misma contrase&ntilde;a</label></p>	
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <input name="submit" type="submit" value="Reg&iacute;strarte" id="enviar-btn" data-role="button" class="btn btn-default  botontrans" />
+                                    <a href="#item1"  class="panel"><button class="btn btn-default  botontrans panel" style="float:right">Atr&aacute;s</button></a>
+                                </div>
+                            </div>
+                            </fieldset>			
+                            </form>				
+			    </div>
+		    </div>
+	    </div>
+    </div>	
+</div>
+<!--end ALTA-->			
+
+		
+<!--REMEMBER-->	
+<div id="item3" class="margentercera section"><a name="item3"></a>			
+	
+        <div class="container">
+			<div class="row">
+				<div class="col-12">
+
+					
+						<div id="remember_form">
+						<form name="nuevo_empleado" action="" onsubmit="enviarDatosEmpleado(); return false">
+                                <label for="nombre">E-mail:</label>
+								<input type="email"  data-role="none" class="form-control" id="emailrecuperar" name="emailrecuperar" required="required" />
+							
+						<div class="row margenboton">
+						     <div class="col-6"><input name="submit" type="submit" value="Recuperar" id="enviar-recuperar" data-role="button" class="btn btn-default  botontrans" /></div>
+					    	 <div class="col-6 text-right"><a href="#item1" class="btn btn-default botontrans panel">Login</a></div>
+						</div>  
+						</form>
+                        </div>
+                        <p class="white margenpe">Para recuperar tus datos, por favor, ind&iacute;canos tu correo electr&oacute;nico y te los mandaremos</p>	
+                </div> 	
+		    </div>
+	    </div>
+
+</div>
+<!--end REMEMBER-->	
+		
+
+</div>
+</div>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.scrollTo.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/elmundo.js"></script>
+<script src="cordova.js"></script>
+<script>
+//LOGIN
+$('#formulario').submit(function() { 
+	// recolecta los valores que inserto el usuario
+	var datosUsuario = $("#nombredeusuario").val()
+	var datosPassword = $("#clave").val()
+  	archivoValidacion = "https://elmundo.webexpo.es/validacion_de_datos.php?jsoncallback=?"
+	$.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword})
+	.done(function(respuestaServer) {
+
+		if(respuestaServer.validacion == "ok") {		  
+		 	/// si la validacion es correcta
+			//$.mobile.changePage("segunda.html");	  
+			var nivel = respuestaServer.nivel;
+			if (nivel ==50)
+				window.location.href="subastas_asociados.html";
+			else
+				window.location.href="segunda.html";		
+			sessionStorage.setItem('respuestaServer.validacion', respuestaServer.validacion);                            	
+			sessionStorage.setItem('respuestaServer.nom', respuestaServer.nom);
+			sessionStorage.setItem('respuestaServer.cognom', respuestaServer.cognom);
+			sessionStorage.setItem('respuestaServer.ide', respuestaServer.ide);
+			sessionStorage.setItem('respuestaServer.nivel', respuestaServer.nivel);
+			sessionStorage.setItem('datosUsuario', datosUsuario);
+			sessionStorage.setItem('datosPassword', datosPassword);
+			
+			// guardamos el usuario registrado
+			localStorage.setItem('ElmundoEnVenta.Usuario', datosUsuario);
+			localStorage.setItem('ElmundoEnVenta.Password', datosPassword);
+
+		} else {
+          alert(html_entity_decode('No puede conectarse, ' + respuestaServer.mensaje, 'ENT_QUOTES'));
+		}
+  
+	})
+	return false;
+})
+
+$('[required]').on('blur', function () {
+    if (!$(this).val().length) { // check if the value is empty
+        // Could do an alert or something else
+    }
+});
+
+//ALTA
+$(document).ready(function() {
+$('.error').hide();
+	// Recuperamos los datos del localstorage
+	$("#nombredeusuario").val(localStorage.getItem('ElmundoEnVenta.Usuario'));
+	$("#clave").val(localStorage.getItem('ElmundoEnVenta.Password'));
+	sessionStorage.setItem('CategoriaBase', 0);	
+	sessionStorage.setItem('CategoriaNivel1', 0);	
+	sessionStorage.setItem('CategoriaNivel2', 0);	
+	sessionStorage.setItem('precio', 0);	
+	sessionStorage.setItem('periodo', 0);	
+	sessionStorage.setItem('Explicacion', '');	
+});
+
+//RECUPERAR	
+function objetoAjax(){
+	var xmlhttp=false;
+	try {
+		xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+	} catch (e) {
+ 
+	try {
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	} catch (E) {
+		xmlhttp = false;
+	}
+}
+ 
+if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+	  xmlhttp = new XMLHttpRequest();
+	}
+	return xmlhttp;
+}
+
+function enviarDatosEmpleado(){
+  divResultado = document.getElementById('resultado');
+  emailrec=document.nuevo_empleado.emailrecuperar.value;
+  ajax=objetoAjax();
+ 
+  ajax.open("POST", "https://elmundo.webexpo.es/recuperar.php",true);
+  ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+  ajax.send("emailrecuperar="+emailrec)
+  ajax.onreadystatechange=function() {
+  	if (ajax.readyState==4) {
+		resposta = JSON.parse(ajax.responseText);
+		if (resposta.Status=='OK')
+			alert("Hemos enviado un correo con tus datos. Lo recibiras solo si ya te habías inscrito con anterioridad. Revisalo y registrate");
+		else
+			alert("No hemos podido enviar tus datos. Motivo : "+html_entity_decode(resposta.Description));
+		}
+ }
+}
+</script>
+</body>
+</html>
