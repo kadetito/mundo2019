@@ -46,9 +46,9 @@
                                     <form id="formulario" method="post">
                                     <label> Usuario </label>
                                             <input type="email"  placeholder="Escribe tu e-mail" class="form-control" id="nombredeusuario"  name="nombredeusuario">
-                                    <label> Tu contrase&ntilde;a </label>
+                                    <label class="mt-2"> Tu contrase&ntilde;a </label>
                                             <input type="password" id="clave" placeholder="Escribe tu contrase&ntilde;a"  class="form-control"   name="clave" >
-                                        <div class="row">
+                                        <div class="row mt-3">
                                             <div class="col-6 text-center">
                                                 <button class="btn btn-default botontrans" type="submit"  value="Login" id="botonLogin">Conectar</button>
                                             </div>
@@ -58,7 +58,7 @@
                                 </div>
              
                         </div> 
-                        <div class="row">			 		
+                        <div class="row mt-4">			 		
                             <div class="col-md-12 bnjp" align="center"><a href="#item3" class="panel sombreado">No recuerdo mi contrase&ntilde;a</a></div>
                         </div>
                     </div>
@@ -211,17 +211,13 @@ $('#formulario').submit(function() {
   
 	})
 	return false;
-})
-
-$('[required]').on('blur', function () {
-    if (!$(this).val().length) { // check if the value is empty
-        // Could do an alert or something else
-    }
 });
+
+
 
 //ALTA
 $(document).ready(function() {
-$('.error').hide();
+//$('.error').hide();
 	// Recuperamos los datos del localstorage
 	$("#nombredeusuario").val(localStorage.getItem('ElmundoEnVenta.Usuario'));
 	$("#clave").val(localStorage.getItem('ElmundoEnVenta.Password'));
