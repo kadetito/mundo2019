@@ -116,10 +116,17 @@ a.sombreado{text-shadow: 2px 2px #000;}
 
 
 
+.botontrans{background-color:rgba(0,0,0,0.5);color:#ffffff;border:1px solid #ffffff;
+}
+ 
+#remember{text-shadow:none;}
+#remember h4{text-shadow:none;color:#ffffff;}
+ label{text-shadow:none;color:#ffffff;}
 
+a{text-decoration:none;color:#ffffff !important;text-shadow:none;}
+a:hover{text-decoration:none;color:#000 !important;text-shadow:none;}
 
-
-
+.white{color:#ffffff;text-align:center;}
 
 
 
@@ -199,17 +206,11 @@ a.sombreado{text-shadow: 2px 2px #000;}
  
  .whitejh{text-align:center;}
  
- 
- #remember{text-shadow:none;}
- #remember h4{text-shadow:none;color:#ffffff;}
- 
+
  
 #alta{text-shadow:none;}
  #alta h4{text-shadow:none;color:#ffffff;}
- label{text-shadow:none;color:#ffffff;}
- 
- a{text-decoration:none;color:#ffffff !important;text-shadow:none;}
- a:hover{text-decoration:none;color:#000 !important;text-shadow:none;}
+
  
 .ui-btn {background-color:#31b3de !important;}
 .ui-btn .botogroc{background-color:#deb731 !important;}
@@ -553,8 +554,7 @@ z-index:9999 !important;
 
 
 
-.botontrans{background-color:rgba(0,0,0,0.5);color:#ffffff;border:1px solid #ffffff;
-	}
+
 
 
 .mtop333 label{font-weight:normal;}
@@ -607,7 +607,7 @@ height:100%;
 .mtop3334 legend{font-size:18px !important;color:#ffffff;}
 .mtop3334 .form-control::placeholder { color: afafaf;font-size:11px !important;font-weight:normal;  }
 
-.white{color:#ffffff;text-align:center;}
+
 
 
 
