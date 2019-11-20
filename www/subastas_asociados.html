@@ -9,14 +9,15 @@
   <link rel="stylesheet" href="css/sidebar.css" />
 </head>
 <body>
-<div class="toggle" id="wrapper">   
+<div class="toggle" id="wrapper"> 
+<!--AIXO ES FIXE A TOT ARREU-->      
     <aside>
         <div id="sidebar-wrapper">
             <ul id="sidebar_menu" class="sidebar-nav">
-                <li class="sidebar-brand"></li>
+                    <li id="div_Result"></li>
             </ul>
             <ul class="sidebar-nav" id="sidebar">
-                <li id="div_Result"></li>
+           
                 <li><a href="segunda.html">Inicio</a></li>
                 <li><a href="perfil.html">Mi perfil </li>
                 <li><a href="mis_subastas.html">Mis ofertas</a></li>
@@ -36,6 +37,7 @@
                 </div>
             </div>
     </header>     
+<!--AIXO ES FIXE A TOT ARREU-->
 
     <div class="container" id="page-content-wrapper">
         <div class="row margensuperior cuerpo">
@@ -86,6 +88,28 @@ $("#menu-toggle").click(function(e) {
 	$("#wrapper").toggleClass("active");
 });
 </script>
+<script>
+        $(document).ready(function(){
+        
+            // Recuperamos datos 	
+            var response_estado = sessionStorage.getItem('respuestaServer.validacion');              
+            var response_url 	= sessionStorage.getItem('response.url');
+            var response_id 	= sessionStorage.getItem('respuestaServer.ide');
+            var response_nom 	= sessionStorage.getItem('respuestaServer.nom');
+            var response_cognom = sessionStorage.getItem('respuestaServer.cognom');
+            var response_nivel  = sessionStorage.getItem('respuestaServer.nivel');
+            var datosUsuario	= sessionStorage.getItem('datosUsuario');
+            var datosPassword	= sessionStorage.getItem('datosPassword');
+            
+             //if (response_estado==1){    
+                
+            // Mostramos nombre del usuario                            
+            $("#div_Result").html('<li class="text-center"><h4 class="datonom"> '+response_nom +' '+response_cognom+'</h4><span class="datouser">'+datosUsuario+'</span></li>'	);
+            var url="https://elmundo.webexpo.es/rebote.php";
+            $("#div_Result2").html("");
+            
+            });
+    </script> 
 <script src="cordova.js"></script>
 </body>
 </html>

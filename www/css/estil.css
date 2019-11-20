@@ -115,7 +115,7 @@ a.sombreado{text-shadow: 2px 2px #000;}
 
 
 
-
+.superboton{width:100%;background-color:#406288;color:#ffffff;}
 .botontrans{background-color:rgba(0,0,0,0.5);color:#ffffff;border:1px solid #ffffff;
 }
  
@@ -128,8 +128,12 @@ a:hover{text-decoration:none;color:#000 !important;text-shadow:none;}
 
 .white{color:#ffffff;text-align:center;}
 
+.cuerposuperior{background-color:#f0f1f1;border-bottom:1px solid #bdbec0;border-top:1px solid #bdbec0;}
 
-
+.datouser{display:block;}
+.datonom{display:block;}
+#div_Result{padding-top:30px;padding-bottom:10px;}
+.sidebar-nav h4{font-size:18px;}
 /*
 
 
