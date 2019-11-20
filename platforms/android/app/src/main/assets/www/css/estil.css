@@ -16,7 +16,7 @@ html {
 body {
     -ms-touch-action: pan-y ;
     -ms-content-zooming: none ;
-    background-color:#d7e5ef;
+    background-color:#ffffff;
     color:#000;
 }
 
@@ -63,13 +63,78 @@ input, textarea  {
 
 #descripcion_alta{font-size:14px;}
 	
-
-#item1{height:100vh;}	
-#item2{height:100vh;}		
+#item1{height:100vh}	
+#item2{height:100vh}		
 #item3{height:100vh;}	
-#item1{background:url('https://elmundo.webexpo.es/img/backone.jpg');}
-#item2{background:url('https://elmundo.webexpo.es/img/back3.jpg');}
-#item3{background:url('https://elmundo.webexpo.es/img/backtwo.jpg');}
+#item1{background:url('../img/backone.jpg');}
+#item2{background:url('../img/back3.jpg');}
+#item3{background:url('../img/backtwo.jpg');}
+
+.margensuperio{padding-top:60%;}
+.margensuperiose{padding-top:40%;}
+.margentercera {padding-top:98%;}
+.logoomni{position:absolute;top:10%;z-index:9999;}
+.flotant{position:absolute;bottom:12%;z-index:9999;}
+.margenboton{margin-top:15px;}
+.margenpe{margin-top:65px;}
+
+a.sombreado{text-shadow: 2px 2px #000;}
+
+/******CABECERA***/
+.cabecera{
+    position:fixed;
+    top:0px;
+    left:0px;
+    height:50px;
+    width:100%;
+    margin:0px;
+    padding:0px;
+    background-color: #22669f;
+}
+.posicionadorimg{width:90%;padding-top:8px;padding-left:0px;}
+.posicionadoricono{width:80%;padding-top:12px;float:right;}
+
+/******PIE***/
+.pie{
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    height:50px;
+    width:100%;
+    margin:0px;
+    padding:0px;
+    background-color: #22669f;
+}
+
+/******CUERPO*******/
+.margensuperior{margin-top:80px;}
+
+.cuerpo a.link {color:#333333 !important;}
+.cuerpo p{margin:0px;padding:0px;font-size:11px;}
+.divisores{margin-top:12px;margin-bottom:12px;border-top:1px solid #666666;border-bottom:1px solid #666666;padding-top:5px;padding-bottom:5px;}
+
+
+
+.superboton{width:100%;background-color:#406288;color:#ffffff;}
+.botontrans{background-color:rgba(0,0,0,0.5);color:#ffffff;border:1px solid #ffffff;
+}
+ 
+#remember{text-shadow:none;}
+#remember h4{text-shadow:none;color:#ffffff;}
+ label{text-shadow:none;color:#ffffff;}
+
+a{text-decoration:none;color:#ffffff !important;text-shadow:none;}
+a:hover{text-decoration:none;color:#000 !important;text-shadow:none;}
+
+.white{color:#ffffff;text-align:center;}
+
+.cuerposuperior{background-color:#f0f1f1;border-bottom:1px solid #bdbec0;border-top:1px solid #bdbec0;}
+
+.datouser{display:block;}
+.datonom{display:block;}
+#div_Result{padding-top:30px;padding-bottom:10px;}
+.sidebar-nav h4{font-size:18px;}
+/*
 
 
 .open a, .open a:hover {
@@ -89,19 +154,8 @@ input, textarea  {
   right: 20px;top:10px;
   cursor: pointer;
 }
-.panel {
 
-background-color: transparent !important;
-}
-.panel a {
-  font-size: 14px;
-  padding: 15px 20px 15px 60px;
-  display: block;
-  text-decoration: none;
 
-  position: relative;
-  font-weight: 400;
-}
 .panel ul {
   padding: 0;
   margin: 0;
@@ -156,17 +210,11 @@ background-color: transparent !important;
  
  .whitejh{text-align:center;}
  
- 
- #remember{text-shadow:none;}
- #remember h4{text-shadow:none;color:#ffffff;}
- 
+
  
 #alta{text-shadow:none;}
  #alta h4{text-shadow:none;color:#ffffff;}
- label{text-shadow:none;color:#ffffff;}
- 
- a{text-decoration:none;color:#ffffff !important;text-shadow:none;}
- a:hover{text-decoration:none;color:#000 !important;text-shadow:none;}
+
  
 .ui-btn {background-color:#31b3de !important;}
 .ui-btn .botogroc{background-color:#deb731 !important;}
@@ -395,9 +443,25 @@ box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.47);border-radius:0px;}
 .alert-info p{font-size:13px !important;font-weight:normal !important;padding:0px;margin:0px;}
 .micargador{background-color:rgba(0,0,0,0.7);width:100%;height:8000px;float:left;}
 
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+/*
 .loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+    border: 16px solid #f3f3f3; 
+    border-top: 16px solid #3498db; 
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -494,8 +558,7 @@ z-index:9999 !important;
 
 
 
-.botontrans{background-color:transparent;color:#ffffff;border:1px solid #ffffff;
-	}
+
 
 
 .mtop333 label{font-weight:normal;}
@@ -536,9 +599,6 @@ height:100%;
 
 .modalmasaltra .modal{top:75px;}
 .modalmasaltra .modal .modal-body p{font-weight:normal !important;}
-/**
- * Footer Styles
- */
 
 .mtop3334{padding-top:85px;}
 .mtop3334 h4{color:#ffffff;font-size:18px;}
@@ -551,7 +611,7 @@ height:100%;
 .mtop3334 legend{font-size:18px !important;color:#ffffff;}
 .mtop3334 .form-control::placeholder { color: afafaf;font-size:11px !important;font-weight:normal;  }
 
-.white{color:#ffffff;text-align:center;}
+
 
 
 
@@ -627,3 +687,4 @@ height:100%;
 	position:relative;
 	top:1px;
 }
+*/
