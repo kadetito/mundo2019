@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/sidebar.css" />
 </head>
 <body>
-<div class="toggle" id="wrapper"> 
+<div class="toggle"> 
 <!--AIXO ES FIXE A TOT ARREU-->      
     <aside>
         <div id="sidebar-wrapper">
@@ -111,7 +111,7 @@
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/scripts.js"></script>
+
 <script src="js/elmundo.js"></script>
 
 <script>
@@ -187,7 +187,7 @@ $("#menu-toggle").click(function(e) {
         document.getElementById("posicioBotoImatge").innerHTML ='<a href="camara.html"><img src="img/backphoto.jpg" alt="subir foto" /></a>';	
     } else {
         $("#tableBanner").attr('src', imagen);
-        document.getElementById("posicioBotoImatge").innerHTML = '<center><div class="imgtpunt"><a href="#" class="pop"><img src="'+imagen+'" id="tableBanner" style="width:100%"/></a></div></center><center><a href="camarafr.html"  class="btn btn-default massfh groddo  biff"><i class="fa fa-camera fa-2x" aria-hidden="true"></i><br />Cambiar</a><div class="btn btn-default massfh groddo  biff" id="elimag" onclick="esborrarFoto()"><i class="fa fa-trash fa-2x" aria-hidden="true" style="margin-top:34px"></i><br />Borrar</div></center>';	
+        document.getElementById("posicioBotoImatge").innerHTML = '<center><div class="imgtpunt"><a href="#" class="pop"><img src="'+imagen+'" id="tableBanner" style="width:60%"/></a></div></center><center><a href="camara.html"  class="btn btn-default massfh groddo  biff"><i class="fa fa-camera fa-2x" aria-hidden="true"></i><br />Cambiar</a><div class="btn btn-default massfh groddo  biff" id="elimag" onclick="esborrarFoto()"><i class="fa fa-trash fa-2x" aria-hidden="true" style="margin-top:34px"></i><br />Borrar</div></center>';	
     }	
         
     //borrar imatge
