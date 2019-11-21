@@ -1,126 +1,4 @@
-<!DOCTYPE html> 
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Asociado</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/estil.css" />
-  <link rel="stylesheet" href="css/sidebar.css" />
-</head>
-<body>
-<div class="toggle" id="wrapper"> 
-<!--AIXO ES FIXE A TOT ARREU-->      
-    <aside>
-        <div id="sidebar-wrapper">
-                <ul id="sidebar_menu" class="sidebar-nav">
-                        <li id="div_Result"></li>
-                </ul>
-            <ul class="sidebar-nav" id="sidebar">
-                <li id="div_Result"></li>
-                <li><a href="segunda.html">Inicio</a></li>
-                <li><a href="perfil.html">Mi perfil </li>
-                <li><a href="mis_subastas.html">Mis ofertas</a></li>
-                <li id="subastaspublicadas" style="display:none"><a href="subastas_asociados.html">Ofertas publicadas</a></li>
-                <li><a href="#" data-role="button" id="closeapp_2">Desconectar</a></li>
-            </ul>
-        </div>
-    </aside>   
-    <header>
-            <div class="row cabecera">
-                <div class="col-8"><img class="posicionadorimg" src="img/logo_elmundoenventa.svg"  /></div>
-                <div class="col-2">
-                    <a href="professionals.html"><img class="posicionadoricono" src="img/prof.svg" /></a>
-                </div>
-                <div class="col-2">
-                        <a id="menu-toggle" href="#"><img class="posicionadoricono" src="img/bars.svg" /></a>
-                </div>
-            </div>
-    </header>     
-<!--AIXO ES FIXE A TOT ARREU-->
 
-    <div class="container" id="page-content-wrapper">
-
-        <div class="row">
-            <div class="col-12 cuerpo margensuperior mb-2">
-                <p>Explícanos qué estás buscando. Para ello puedes enviarnos una foto o escoger las diferentes opciones.</p>
-            </div>
-        </div>
-            
-        
-        <div class="row">
-            <div class="col-12 cuerpo">
-               
-                
-
-<form id="paso4" action="paso4.html" method="POST">	
-                <div class="row">
-                        <div class="col-12 cuerposuperior p-3 text-center"><div id="posicioBotoImatge"></div></div>
-                </div>              
-<!--backphoto---->
-
-
-                <div class="row">
-                    <div class="col-12 cuerpo p-3">
-                        <p>Expl&iacute;canos qu&eacute; es lo que estas buscando</p>
-                        <input type="text" class="form-control" name="servicioSugerencia" value="" id="servicioSugerencia" />
-                        <div id="Sugerencia"></div>
-                        <p>Elige de qu&eacute; se trata lo que buscas </p>
-                        <select class="form-control" name="category" id="category"></select>    
-                        <div id="subcategoria" style="display: none">  
-                        <p>Escoge una subcategor&iacute;a</p>
-                        <select class="form-control" name="subcategory" id="subcategory"></select>	
-                        </div>	           
-                        <div id="TipoProducto" style="display: none">
-                        <p>En qu&eacute; estado lo estas buscando</p>
-                        <select class="form-control" name="tipoArticulo" id="tipoArticulo"></select>	  
-                        </div>   
-                        <div id="botonsiguiente" style="margin-top:15px; display: none"><center><input type="submit" class="btn btn-default massfh groddo biff" value="Siguiente" /></center>
-                        </div>       
-                    </div>
-                </div>
-</form>	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-        </div>
-    </div>
-
-    <footer>
-            <div class="row pie">
-                <div class="col-12"></div>
-            </div>
-    </footer>
-</div>
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/scripts.js"></script>
-<script src="js/elmundo.js"></script>
-
-<script>
-$("#menu-toggle").click(function(e) {
-	e.preventDefault();
-	$("#wrapper").toggleClass("active");
-});
-</script>
-<script type="text/javascript">
     //SUGERENCIA
     $(document).ready(function() {    
         //Al escribr dentro del input con id="service"
@@ -184,7 +62,7 @@ $("#menu-toggle").click(function(e) {
         
     var imagen = sessionStorage.getItem('imgData');	
     if (!imagen || imagen === null || imagen === 'null') { 
-        document.getElementById("posicioBotoImatge").innerHTML ='<a href="camara.html"><img src="img/backphoto.jpg" alt="subir foto" /></a>';	
+        document.getElementById("posicioBotoImatge").innerHTML ='<a href="camarafr.html"><img src="img/backphoto.jpg" alt="subir foto" /></a>';	
     } else {
         $("#tableBanner").attr('src', imagen);
         document.getElementById("posicioBotoImatge").innerHTML = '<center><div class="imgtpunt"><a href="#" class="pop"><img src="'+imagen+'" id="tableBanner" style="width:100%"/></a></div></center><center><a href="camarafr.html"  class="btn btn-default massfh groddo  biff"><i class="fa fa-camera fa-2x" aria-hidden="true"></i><br />Cambiar</a><div class="btn btn-default massfh groddo  biff" id="elimag" onclick="esborrarFoto()"><i class="fa fa-trash fa-2x" aria-hidden="true" style="margin-top:34px"></i><br />Borrar</div></center>';	
@@ -395,30 +273,8 @@ $("#menu-toggle").click(function(e) {
         
     
     
-    $(document).ready(function(){
-    
-    // Recuperamos datos 	
-    var response_estado = sessionStorage.getItem('respuestaServer.validacion');              
-    var response_url 	= sessionStorage.getItem('response.url');
-    var response_id 	= sessionStorage.getItem('respuestaServer.ide');
-    var response_nom 	= sessionStorage.getItem('respuestaServer.nom');
-    var response_cognom = sessionStorage.getItem('respuestaServer.cognom');
-    var response_nivel  = sessionStorage.getItem('respuestaServer.nivel');
-    var datosUsuario	= sessionStorage.getItem('datosUsuario');
-    var datosPassword	= sessionStorage.getItem('datosPassword');
-    
-     //if (response_estado==1){    
-        
-    // Mostramos nombre del usuario                            
-    $("#div_Result").html("<li>"+datosUsuario+' '+response_nom +' '+response_cognom+"</li>"	);
-    var url="https://elmundo.webexpo.es/rebote.php";
-    $("#div_Result2").html("");
-    
-    });
-                    
 
+                    
     
-    </script>
-<script src="cordova.js"></script>
-</body>
-</html>
+ 
+    

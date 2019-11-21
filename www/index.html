@@ -7,18 +7,50 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estil.css" />
     <link rel="stylesheet" href="css/slidetext.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+
+function addOverflow(){
+    //$('#wrapper').removeClass('wrapper_add');
+}
+
+        $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+        
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+        
+            // Store hash
+            var hash = this.hash;
+        
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+        
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+            } // End if
+        });
+        });
+    </script>
 </head>
 <body> 
 <div class="logoomni">
     <img src="img/logo_elmundoenventa.svg" alt="El mundo en venta" title="El mundo en venta" style="width:100%;" />
 </div>
-	
-<div id="wrapper">
+
+<div id="wrapper" class="wrapper_add">
         <div id="mask">
 
             <!--INICIAL-->    
             
-            <div id="item1" class="margensuperio section"><a name="item1"></a>					
+            <div id="item1" class="margensuperio section">		
                     <div class="flotant" id="myPageContent">	
                         <div id="home">
                             <div id="textSlider" class="row">
@@ -40,7 +72,7 @@
                         </div>
                     </div>
                     <div class="container">							
-                        <div class="row">
+                        <div class="row flotantsuperior">
                             <div class="col-md-12">
                            
                                     <form id="formulario" method="post">
@@ -52,21 +84,20 @@
                                             <div class="col-6 text-center">
                                                 <button class="btn btn-default botontrans" type="submit"  value="Login" id="botonLogin">Conectar</button>
                                             </div>
-                                            <div class="col-6 text-center"><a href="#item2" class="btn  btn-default botontrans panel">Inscribirse</a></div>
+                                            <div class="col-6 text-center"><a href="#item2"  class="btn  btn-default botontrans panel">Inscribirse</a></div>
                                         </div>     
                                     </form>
+                                    <div class="row mt-4">			 		
+                                            <div class="col-md-12 bnjp" align="center"><a href="#item3"  class="panel sombreado">No recuerdo mi contrase&ntilde;a</a></div>
+                                    </div>
                                 </div>
-             
                         </div> 
-                        <div class="row mt-4">			 		
-                            <div class="col-md-12 bnjp" align="center"><a href="#item3" class="panel sombreado">No recuerdo mi contrase&ntilde;a</a></div>
-                        </div>
                     </div>
             </div>
             <!--end INICIAL-->	
 		
 <!--ALTA-->	
-		<div id="item2" class="margensuperiose section"><a name="item2"></a>
+		<div id="item2" class="margensuperiose section">
 		    <div class="container">
 			    <div class="row">
 				    <div class="col-12">
@@ -76,55 +107,49 @@
                             <legend><div id="descripcion_alta" class="white">Necesitamos que nos facilites algunos datos...</div></legend>
                             
                             <div class="row">
-                                <div class="col-12">
+                                <div class="col-12 mb-2">
                                 <input id="nom" name="nom" type="text" placeholder="Escribe tu nombre" class="form-control input-md">
-                                    <label class="error" for="nom" id="nom_error">Deberias indicar tu nombre, te llamaremos cuando se acepte tu oferta</label></p>
                                 </div>
                             </div>
 
                             <!-- Text input-->
                             <div class="row">
-                                <div class="col-12">
+                                <div class="col-12 mb-2">
                                 <input id="cognom" name="cognom" type="text" placeholder="Escribe tus apellidos" class="form-control input-md">
-                                        <label class="error" for="cognom" id="cognom_error">Deberias indicar tus apellidos, te llamaremos cuando se acepte tu oferta</label></p>		
                                 </div>
                             </div>
 
                             <!-- Text input-->
                             <div class="row">
-                                <div class="col-12">
+                                <div class="col-12 mb-2">
                                 <input id="telefon" name="telefon" type="text" placeholder="Escribe tu teléfono" class="form-control input-md">
-                                        <label class="error" for="telefon" id="telefon_error">Necesitamos tener un tel&eacute;fono de contacto, te llamaremos cuando se acepte tu oferta</label></p>		
                                 </div>
                             </div>
 
                             <!-- Text input-->
                             <div class="row"> 
-                                <div class="col-12">
+                                <div class="col-12 mb-2">
                                 <input id="email" name="email" type="text" placeholder="Escribe tu e-mail" class="form-control input-md">
-                                        <label class="error" for="name" id="name_error">Debes indicarnos un E-mail v&aacute;lido, ser&aacute; tu c&oacute;digo de usuario para acceder a la aplicaci&oacute;n y donde te mandaremos las notificaciones</label></p>
                                 </div>
                             </div>
 
                             <!-- Text input-->
                             <div class="row">
-                                <div class="col-12">  
-                                    <label class=" control-label" for="password">Contraseña</label>  
+                                <div class="col-12 mb-2">  
+                              
                                         <input id="password" name="password" type="text" placeholder="Elige una contraseña" class="form-control input-md">
-                                        <label class="error" for="password" id="pass_error">Por favor, indica una contrase&ntilde;a para podert conectar otro d&iacute;a a esta aplicaci&oacute;n</label>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-12"> 
-                                    <label class="control-label" for="password2">Coincidencia</label>  
+                                <div class="col-12 mb-2"> 
+           
                                     <input id="password2" name="password2" type="text" placeholder="Repite la contraseña" class="form-control input-md">
-                                        <label class="error" for="password2"  id="pass_error2">Escriba exactamente la misma contrase&ntilde;a</label></p>	
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-12">
+                                <div class="col-12 mb-2">
                                     <input name="submit" type="submit" value="Reg&iacute;strarte" id="enviar-btn" data-role="button" class="btn btn-default  botontrans" />
-                                    <a href="#item1"  class="panel"><button class="btn btn-default  botontrans panel" style="float:right">Atr&aacute;s</button></a>
+                                    <a href="#item1"  onclick="addOverflow()" class="btn btn-default  botontrans panel" style="float:right">Atr&aacute;s</a>
                                 </div>
                             </div>
                             </fieldset>			
@@ -138,8 +163,8 @@
 
 		
 <!--REMEMBER-->	
-<div id="item3" class="margentercera section"><a name="item3"></a>			
-	
+<div id="item3" class="margentercera section">	
+
         <div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -152,7 +177,7 @@
 							
 						<div class="row margenboton">
 						     <div class="col-6"><input name="submit" type="submit" value="Recuperar" id="enviar-recuperar" data-role="button" class="btn btn-default  botontrans" /></div>
-					    	 <div class="col-6 text-right"><a href="#item1" class="btn btn-default botontrans panel">Login</a></div>
+					    	 <div class="col-6 text-right"><a href="#item1"  onclick="addOverflow()" class="btn btn-default botontrans panel">Login</a></div>
 						</div>  
 						</form>
                         </div>
@@ -168,10 +193,9 @@
 </div>
 </div>
 
-<script src="js/jquery-1.11.1.min.js"></script>
+
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.scrollTo.js"></script>
 
 <script src="js/elmundo.js"></script>
 <script src="cordova.js"></script>

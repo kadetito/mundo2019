@@ -1,21 +1,11 @@
-
-body {
-    -webkit-touch-callout: none ;
-    -webkit-text-size-adjust: none ; -ms-text-size-adjust: none ;
-    -webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none ; user-select: none ;
-    -webkit-highlight: none ;
-    -webkit-tap-highlight-color: rgba(0,0,0,0) ;
-    -webkit-tap-highlight-color: transparent ;      /* For some Androids */
-}
-
 html {
-    -ms-touch-action: pan-x ;  height: 100%;
+ 
 }
 
 
+
 body {
-    -ms-touch-action: pan-y ;
-    -ms-content-zooming: none ;
+
     background-color:#ffffff;
     color:#000;
 }
@@ -33,8 +23,9 @@ input, textarea  {
 	height:100%;
 	position:absolute;
 	top:0;left:0;
-	overflow:hidden;
+  overflow:hidden;
 }
+
 #mask {
 		width:100%;
 		height:500%;
@@ -70,7 +61,7 @@ input, textarea  {
 #item2{background:url('../img/back3.jpg');}
 #item3{background:url('../img/backtwo.jpg');}
 
-.margensuperio{padding-top:60%;}
+.flotantsuperior{position:absolute;top:30%;width:100%;z-index:9999;}
 .margensuperiose{padding-top:40%;}
 .margentercera {padding-top:98%;}
 .logoomni{position:absolute;top:10%;z-index:9999;}
@@ -134,6 +125,19 @@ a:hover{text-decoration:none;color:#000 !important;text-shadow:none;}
 .datonom{display:block;}
 #div_Result{padding-top:30px;padding-bottom:10px;}
 .sidebar-nav h4{font-size:18px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 
 

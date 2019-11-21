@@ -13,9 +13,9 @@
 <!--AIXO ES FIXE A TOT ARREU-->      
     <aside>
         <div id="sidebar-wrapper">
-                <ul id="sidebar_menu" class="sidebar-nav">
-                        <li id="div_Result"></li>
-                </ul>
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"></li>
+            </ul>
             <ul class="sidebar-nav" id="sidebar">
                 <li id="div_Result"></li>
                 <li><a href="segunda.html">Inicio</a></li>
@@ -184,7 +184,7 @@ $("#menu-toggle").click(function(e) {
         
     var imagen = sessionStorage.getItem('imgData');	
     if (!imagen || imagen === null || imagen === 'null') { 
-        document.getElementById("posicioBotoImatge").innerHTML ='<a href="camara.html"><img src="img/backphoto.jpg" alt="subir foto" /></a>';	
+        document.getElementById("posicioBotoImatge").innerHTML ='<a href="camarafr.html"><img src="img/backphoto.jpg" alt="subir foto" /></a>';	
     } else {
         $("#tableBanner").attr('src', imagen);
         document.getElementById("posicioBotoImatge").innerHTML = '<center><div class="imgtpunt"><a href="#" class="pop"><img src="'+imagen+'" id="tableBanner" style="width:100%"/></a></div></center><center><a href="camarafr.html"  class="btn btn-default massfh groddo  biff"><i class="fa fa-camera fa-2x" aria-hidden="true"></i><br />Cambiar</a><div class="btn btn-default massfh groddo  biff" id="elimag" onclick="esborrarFoto()"><i class="fa fa-trash fa-2x" aria-hidden="true" style="margin-top:34px"></i><br />Borrar</div></center>';	
@@ -416,7 +416,11 @@ $("#menu-toggle").click(function(e) {
     
     });
                     
-
+    
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+    });
     
     </script>
 <script src="cordova.js"></script>
