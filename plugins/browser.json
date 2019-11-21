@@ -12,6 +12,9 @@
     },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.elmundoenventa.mundo2019"
+    },
+    "cordova-plugin-camera-preview": {
+      "PACKAGE_NAME": "com.elmundoenventa.mundo2019"
     }
   },
   "dependent_plugins": {}
