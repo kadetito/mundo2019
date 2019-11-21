@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <title>El mundo en venta App oficial</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap3.min.js"></script>
-<script src="elmundo.js"></script>
-<link rel="stylesheet" href="css/bootstrap3.min.css" />
+<script src="jquery.min.js"></script>
+<script src="bootstrap3.min.js"></script>
+<script src="https://elmundo.webexpo.es/elmundo.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="bootstrap3.min.css" />
+<link rel="stylesheet" href="css/appnw.css" />
 <link rel="stylesheet" type="text/css" href="css/camara.css" />
 </head>
 
@@ -60,6 +62,16 @@
 
 
 
+
+
+<script type="text/javascript">
+
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("active");
+});
+
+</script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="CameraPreview.js"></script>
     <script type="text/javascript" src="js/cam.js"></script>
