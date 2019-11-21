@@ -40,7 +40,8 @@ input, textarea  {
 		background-color:#ddd;
 	}	
 
-
+.cuerpo h5{font-size:14px; border-bottom:1px solid #cccccc;padding-bottom:8px;}
+.kutin li{list-style:none;}
 @media screen and (orientation:portrait) {.leverter{margin-top:50px;} }
 @media screen and (orientation:landscape) { .leverter{margin-top:0px;} }
 

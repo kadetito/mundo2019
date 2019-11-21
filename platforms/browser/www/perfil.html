@@ -42,7 +42,7 @@
 
         <div class="row">
             <div class="col-12 cuerpo margensuperior mb-2">
-                <p>Explícanos qué estás buscando. Para ello puedes enviarnos una foto o escoger las diferentes opciones.</p>
+                <h5>PERFIL</h5>
             </div>
         </div>
             
@@ -55,16 +55,13 @@
 
 
 <form name="nuevo_empleado" action="" onsubmit="enviarDatosEmpleado(); return false">
-                    <h4 style="color:#000;">Para modificar tu password, escribe el nuevo en la casilla. </h4>
-                    
 
-                    
                     
                 <div class="row">
                     <div class="col-12 cuerpo p-3">
-                        <p>Para modificar tu password, escribe el nuevo en la casilla.</p>
+                        <p>Estos son tus datos de acceso. Para modificar tu password, escribe el nuevo en la casilla.</p>
                         <ul id="div_ResultH" class="kutin"></ul>	  
-                       
+                        <input type="checkbox" onclick="myFunction()">Ver password
                         <div id="botonsiguiente" style="margin-top:15px; display: none">
                                 <input name="submit" type="submit" value="Cambiar password" id="enviar-recuperar" data-role="button" class="btn btn-primary " />
                         </div>       
@@ -105,7 +102,16 @@
 <script src="js/bootstrap.min.js"></script>
 
 <script src="js/elmundo.js"></script>
-
+<script>
+        function myFunction() {
+          var x = document.getElementById("passcambiar");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+        </script>
 <script type="text/javascript">
     $(document).ready(function(){
                         
