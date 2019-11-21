@@ -22,12 +22,12 @@ window.onload = function () {
 }; // window.onload event handler
 
 
-function  onSuccess ( imageData )  { 
-    var  image  =  document . getElementById ( 'imagen' ); 
-    imagen . src  =  "datos: imagen / jpeg; base64,"  +  imageData ; 
-    imagen . estilo . margen  =  "10px" ; 
-    imagen . estilo . display  =  "bloque" ; 
+function onSuccess(imageData) {
+    var image = document.getElementById('image');
+    image.src = "data:image/jpeg;base64," + imageData;
+    image.style.margin = "10px";
+    image.style.display = "block";
  }
 
- function  onFail ( mensaje )  { 
-    consola . log ( "Error de imagen:"  +  mensaje );
+ function onFail(message) {
+    console.log("Picture failure: " + message);
