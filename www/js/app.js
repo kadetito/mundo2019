@@ -31,3 +31,4 @@ function onSuccess(imageData) {
 
  function onFail(message) {
     console.log("Picture failure: " + message);
+ }
