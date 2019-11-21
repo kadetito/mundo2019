@@ -1,0 +1,275 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Asociado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estil.css" />
+  <link rel="stylesheet" href="css/sidebar.css" />
+</head>
+<body>
+<div class="toggle" id="wrapper"> 
+<!--AIXO ES FIXE A TOT ARREU-->      
+    <aside>
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li id="div_Result"></li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                <li><a href="segunda.html">Inicio</a></li>
+                <li><a href="perfil.html">Mi perfil </li>
+                <li><a href="mis_subastas.html">Mis ofertas</a></li>
+                <li id="subastaspublicadas" style="display:none"><a href="subastas_asociados.html">Ofertas publicadas</a></li>
+                <li><a href="#" data-role="button" id="closeapp_2">Desconectar</a></li>
+            </ul>
+        </div>
+    </aside>   
+    <header>
+            <div class="row cabecera">
+                <div class="col-8"><img class="posicionadorimg" src="img/logo_elmundoenventa.svg"  /></div>
+                <div class="col-2">
+                    <a href="professionals.html"><img class="posicionadoricono" src="img/prof.svg" /></a>
+                </div>
+                <div class="col-2">
+                    <a id="menu-toggle" href="#"><img class="posicionadoricono" src="img/bars.svg" /></a>
+                </div>
+            </div>
+    </header>     
+<!--AIXO ES FIXE A TOT ARREU-->
+
+
+    <div class="container" id="page-content-wrapper">
+        <div class="row">
+            <div class="col-12 cuerpo margensuperior mb-2">
+                <h5>Opciones profesional</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 cuerpo"> 
+                <!--ALTA CLIENTE-->
+                <div id="altacliente"   style="display:none">
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                            <p class="text-left pl-2 pr-2">Si eres profesional,esta es tu &aacute;rea.<br />Primero debes darte de alta como asociado. Verificaremos tus datos. Aseguramos a los usuarios que estan tratado con profesionales</p>               
+                                    <div class="text-left mt-4  pl-2 pr-2">
+                                        <form id="form1" method="post" action="escoger_categorias.html">
+                                        <label for="Nombre">Tu nombre</label>
+                                        <input type="text" id="Nombre" placeholder="Escribe aqu&iacute; tu nombre y apellidos" data-role="none" name="Nombre" class="form-control mb-2" required="required" />
+                                        <label for="Empresa">Nombre de la empresa</label>
+                                        <input type="text" id="Empresa" placeholder="Debes saber que solo permitimos empresas reales y que podamos validar" data-role="none" name="Empresa" class="form-control mb-3" required="required"/>
+                                        <label for="NIF">CIF/NIF</label>
+                                        <input type="text" id="NIF" placeholder="NIF de tu actividad" data-role="none" name="NIF" class="form-control mb-2" required="required"/>
+                                        <label for="Descripcion">Describa brevemente su actividad</label>
+                                        <input type="text" id="Descripcion" placeholder="Queremos saber a que se dedica tu empresa, para confirmar que es adecuada para los servicios que ofrecemos a nuestros clientes" data-role="none" name="Descripcion" class="form-control mb-2" required="required"/>
+                                        <label for="Periodo">Periodo que deseas contratar nuestros servicios</label>
+                                        <select id="Periodo" name="Periodo" class="form-control  mb-2">
+                                        <option value="1" selected>1 mes</option>
+                                        <option value="3">3 meses</option>
+                                        <option value="6">6 meses</option>
+                                        <option value="12">12 meses</option> 	
+                                        </select>
+                                        <label for="">Subir archivo Modelo 036</label>
+                                        <input type="file" name="" class="form-control  mb-2" />
+                                            <div id="texte"></div>
+                                        <p class="text-center"><input id="guardar" type="submit" name="paso4" class="btn btn-default superboton" value="Guardar y escoger categor&iacute;as" /></p>
+                                        
+                                    <br /><hr /><br />
+                                    </form>
+                                    </div>
+                    </div>
+                  </div>		
+                </div>               
+                <!--ALTA CLIENTE-->
+                <!--AREA PROFESIONALES-->
+                <div id="profesionales"> 
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p class="text-left pl-2 pr-2">Si eres profesional,esta es tu &aacute;rea.<br />Primero debes darte de alta como asociado. Verificaremos tus datos. Aseguramos a los usuarios que estan tratado con profesionales</p>               
+                                <div class="text-left mt-4  pl-2 pr-2">
+                                    <div class="row">
+                                        <div class="col-4 text-center">
+                                                <div class="botonredon"><a href="clientes.html">Modificar mis datos</a></div>
+                                        </div>	
+                                        <div class="col-4 text-center">
+                                                <div class="botonredon"><a href="escoger_categorias.html">Ampliar los servicios</a></div>
+                                        </div>	
+                                        <div class="col-4 text-center">
+                                                <div class="botonredon"><a href="facturas.html">Acceso a mis facturas</a></div>
+                                        </div>	
+                                    </div>	
+                                    <div class="row">
+                                        <div class="col-6 text-center">
+                                                <div class="botonredon"><a href="misventas.html">Consulta de mis ventas</a></div>
+                                        </div>	
+                                        <div class="col-6 text-center">
+                                                <div class="botonredon"><a href="subastas_asociados.html">Consulta de ofertas activas</a></div>
+                                        </div>	
+                                    </div>		
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!--AREA PROFESIONALES-->
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <footer>
+            <div class="row pie">
+                <div class="col-12"></div>
+            </div>
+    </footer>
+</div>
+  
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+         
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        
+    $('.error').hide();	
+    
+    $('#guardar').click(function () {
+        
+        
+        //Obtenemos el valor del campo nom
+        var camp = $("input#Nombre").val();
+        //Validamos el campo nom, simplemente miramos que no esté vacío
+        if (camp == "") {
+            $("label#Nombre_error").show();
+            $("input#Nombre").focus();
+            return false;
+        }
+            
+        //Obtenemos el valor del campo Empresa
+        var camp = $("input#Empresa").val();
+        //Validamos el campo nom, simplemente miramos que no esté vacío
+        if (camp == "") {
+            $("label#Empresa_error").show();
+            $("input#Empresa").focus();
+            return false;
+        }
+            
+        //Obtenemos el valor del campo NIF
+        var camp = $("input#NIF").val();
+        //Validamos el campo nom, simplemente miramos que no esté vacío
+        if (camp == "") {
+            $("label#NIF_error").show();
+            $("input#NIF").focus();
+            return false;
+        }
+    
+        //Obtenemos el valor del campo NIF
+        var camp = $("input#Descripcion").val();
+        //Validamos el campo nom, simplemente miramos que no esté vacío
+        if (camp == "") {
+            $("label#Descripcion_error").show();
+            $("input#Descripcion").focus();
+            return false;
+        }	
+        
+        
+        sessionStorage.setItem('Nombre', $('#Nombre').val());
+        sessionStorage.setItem('Empresa', $('#Empresa').val());
+        sessionStorage.setItem('NIF', $('#NIF').val());
+        sessionStorage.setItem('Descripcion', $('#Descripcion').val());
+        sessionStorage.setItem('Periodo', $('#Periodo').val());
+    
+        
+        $('#form1').submit();
+        
+    });
+                        
+    var response_estado = sessionStorage.getItem('respuestaServer.validacion');              
+    var response_url 	= sessionStorage.getItem('response.url');
+    var response_id 	= sessionStorage.getItem('respuestaServer.ide');
+    var response_nom 	= sessionStorage.getItem('respuestaServer.nom');
+    var response_cognom = sessionStorage.getItem('respuestaServer.cognom');
+    var response_nivel  = sessionStorage.getItem('respuestaServer.nivel');
+    var datosUsuario	= sessionStorage.getItem('datosUsuario');
+    var datosPassword	= sessionStorage.getItem('datosPassword');
+    
+    
+    if (response_nivel == 50)
+        {
+        $('#altacliente').hide();
+        $('#profesionales').show();
+        }
+        
+ 
+    
+   
+    function objetoAjax(){
+        var xmlhttp=false;
+        try {
+            xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+     
+        try {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        } catch (E) {
+            xmlhttp = false;
+        }
+    }
+     
+    if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+          xmlhttp = new XMLHttpRequest();
+        }
+        return xmlhttp;
+    }
+     
+    
+    function MostrarConsulta(datos){
+       divResultado = document.getElementById('resultado');
+       ajax=objetoAjax();
+       ajax.open("GET", datos);
+       ajax.onreadystatechange=function() {
+          if (ajax.readyState==4) {
+             divResultado.innerHTML = ajax.responseText
+          }
+       }
+       ajax.send(null)
+    }
+    </script>
+    <script>
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("active");
+});
+</script>
+<script>
+        $(document).ready(function(){
+        
+            // Recuperamos datos 	
+            var response_estado = sessionStorage.getItem('respuestaServer.validacion');              
+            var response_url 	= sessionStorage.getItem('response.url');
+            var response_id 	= sessionStorage.getItem('respuestaServer.ide');
+            var response_nom 	= sessionStorage.getItem('respuestaServer.nom');
+            var response_cognom = sessionStorage.getItem('respuestaServer.cognom');
+            var response_nivel  = sessionStorage.getItem('respuestaServer.nivel');
+            var datosUsuario	= sessionStorage.getItem('datosUsuario');
+            var datosPassword	= sessionStorage.getItem('datosPassword');
+            
+             //if (response_estado==1){    
+                
+            // Mostramos nombre del usuario                            
+            $("#div_Result").html('<li class="text-center"><h4 class="datonom"> '+response_nom +' '+response_cognom+'</h4><span class="datouser">'+datosUsuario+'</span></li>'	);
+            var url="https://elmundo.webexpo.es/rebote.php";
+            $("#div_Result2").html("");
+            
+            });
+    </script> 
+    
+<script src="cordova.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Asociado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estil.css" />
+  <link rel="stylesheet" href="css/sidebar.css" />
+</head>
+<body>
+<div class="toggle" id="wrapper"> 
+<!--AIXO ES FIXE A TOT ARREU-->      
+    <aside>
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                    <li id="div_Result"></li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+           
+                <li><a href="segunda.html">Inicio</a></li>
+                <li><a href="perfil.html">Mi perfil </li>
+                <li><a href="mis_subastas.html">Mis ofertas</a></li>
+                <li id="subastaspublicadas" style="display:none"><a href="subastas_asociados.html">Ofertas publicadas</a></li>
+                <li><a href="#" data-role="button" id="closeapp_2">Desconectar</a></li>
+            </ul>
+        </div>
+    </aside>   
+    <header>
+            <div class="row cabecera">
+                <div class="col-8"><img class="posicionadorimg" src="img/logo_elmundoenventa.svg"  /></div>
+                <div class="col-2">
+                    <a href="professionals.html"><img class="posicionadoricono" src="img/prof.svg" /></a>
+                </div>
+                <div class="col-2">
+                        <a id="menu-toggle" href="#"><img class="posicionadoricono" src="img/bars.svg" /></a>
+                </div>
+            </div>
+    </header>     
+<!--AIXO ES FIXE A TOT ARREU-->
+
+    <div class="container" id="page-content-wrapper">
+
+
+            <div class="row">
+                    <div class="col-12 cuerpo margensuperior mb-2">
+                            <h5>Mis Ofertas</h5>
+                    </div>
+                </div>
+
+
+            <a href="segunda.html" class="floater"><img src="img/afegirmes.svg" alt="FLOATER" /></a>
+
+
+
+        <div class="row">
+            <div class="col-12 margensuperior cuerpo divisores">
+                <p>Estas son las ofertas activas para las categor&iacute;as a las que se ha suscrito.</p>
+                <p>A continuaci&oacute;n ver&aacute; las distintas ofertas ordenadas seg&uacute;n vencimiento, con las posibles acciones a realizar seg&uacute;n el estado de la oferta</p>               
+            </div>
+        </div>
+            
+        
+        <div class="row">
+            <div class="col-12 cuerpo">
+                
+                    <form action="mis_subastas.html" method="POST">
+                            <div class="container-fluid" style="margin-top:12px;">
+                                <div class="row">
+                                    <div class="col-md-12 ">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                                                         
+                                        
+                      
+                        <!-- Quiero publicar otra oferta-->
+                        <!-- Pulsa aquí para saber más sobre mis ofertas.-->				
+                                        
+                                        
+                                        
+                                        
+                                        <div class="collapse sdcssdc" id="collapseExample" style="background-color: #3279B5; padding:8px; margin: 4px">
+                                          <div class="card card-body">
+                                                <p>Estas son las ofertas que has creado recientemente. Se muestran ordenadas por el tiempo que falta para que caduquen. Una vez caducadas, seguiran apareciendo durante 24 horas más, como AGOTADAS.</p>
+
+                                                <p>Puedes borrar o modificar tus ofertas siempre que no hayan sido seleccionadas por uno de nuestros profesionales o haya agotado el plazo</p>
+                                                <br />
+                                          </div>
+                                        </div>				
+                        
+                                        
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">Fecha</th>
+                                                    <th class="text-center" colspan="2">L&iacute;mite</th>
+                                                    <th class="text-center">Acciones</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="mostrarsubastas">
+                                            </tbody>
+                                        </table>				
+                                    </div>
+                                </div>	
+                            </div>
+                        </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <footer>
+            <div class="row pie">
+                <div class="col-12"></div>
+            </div>
+    </footer>
+</div>
+  <!-- Modal -->
+  <div class="modal fade" id="my-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" style="color:darkgrey">Valorar Experiencia</h4>
+            </div>
+            <div class="modal-body">
+           
+              <iframe src="valorar_compra.html" width="100%" height="580"></iframe>
+             
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->  
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/elmundo.js"></script>
+
+<script>
+$(function(){
+	$('#my-modal').on('hidden.bs.modal', function () {
+	  window.location.reload();
+	});
+});
+
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("active");
+});
+</script>
+<script>
+       
+	
+$(document).ready(function(){
+                    
+                    // Recupera los datos
+                    var response_estado = sessionStorage.getItem('respuestaServer.validacion');              
+                    var response_url 	= sessionStorage.getItem('response.url');
+                    var response_id 	= sessionStorage.getItem('respuestaServer.ide');
+                    var response_nom 	= sessionStorage.getItem('respuestaServer.nom');
+                    var response_cognom = sessionStorage.getItem('respuestaServer.cognom');
+                    var response_nivel  = sessionStorage.getItem('respuestaServer.nivel');
+                
+                    
+                    var datosUsuario	= sessionStorage.getItem('datosUsuario');
+                    var datosPassword	= sessionStorage.getItem('datosPassword');
+                    
+                    // Esborrem la marca de actualizació de subasta
+                    sessionStorage.setItem('actualitzacio', null);
+                
+                    // Inicialización de la pantalla
+                    //
+                      archivoValidacion = "https://elmundo.webexpo.es/procesos.php?jsoncallback=?";
+                    $.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword })
+                    .done(function(respuestaServer) {
+                        if(respuestaServer.validacion != "ok") {
+                            // Si no pasa la comprobación de usuario / contraseña, vuelve a la pantalla inicial
+                            window.location.replace('index.html');
+                        }
+                        else {
+                        // elegimos una imagen de fondo al azar
+                            var randomID = new Date().getTime();
+                            
+                        }
+                    });
+                
+                    
+                    // Actualitza listasubastas
+                    update_lista();
+                    arrancar_reloj_missubastas();		
+                    
+                    $("#div_Result").html("<li>"+datosUsuario+' '+response_nom +' '+response_cognom+"</li>"	);
+                    
+                    definiciones_comunes();
+                             
+                 });
+                        
+    </script> 
+<script src="cordova.js"></script>
+</body>
+</html>

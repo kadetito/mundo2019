@@ -1,0 +1,371 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Asociado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estil.css" />
+  <link rel="stylesheet" href="css/sidebar.css" />
+</head>
+<body>
+<div class="toggle" id="wrapper"> 
+<!--AIXO ES FIXE A TOT ARREU-->      
+    <aside>
+        <div id="sidebar-wrapper">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li id="div_Result"></li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                <li><a href="segunda.html">Inicio</a></li>
+                <li><a href="perfil.html">Mi perfil</a> </li>
+                <li><a href="mis_subastas.html">Mis ofertas</a></li>
+                <li id="subastaspublicadas" style="display:none"><a href="subastas_asociados.html">Ofertas publicadas</a></li>
+                <li><a href="#" data-role="button" id="closeapp_2">Desconectar</a></li>
+            </ul>
+        </div>
+    </aside>   
+    <header>
+            <div class="row cabecera">
+                <div class="col-8"><img class="posicionadorimg" src="img/logo_elmundoenventa.svg"  /></div>
+                <div class="col-2">
+                    <a href="professionals.html"><img class="posicionadoricono" src="img/prof.svg" /></a>
+                </div>
+                <div class="col-2">
+                    <a id="menu-toggle" href="#"><img class="posicionadoricono" src="img/bars.svg" /></a>
+                </div>
+            </div>
+    </header>     
+<!--AIXO ES FIXE A TOT ARREU-->
+
+
+    <div class="container" id="page-content-wrapper">
+        <div class="row">
+            <div class="col-12 cuerpo margensuperior mb-2">
+                <h5><a href="professionals.html" class="linktope">Opciones profesional</a> > Datos Cliente</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 cuerpo"> 
+                <!--ALTA CLIENTE-->
+                <div id="altacliente" >
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                            <p class="text-left pl-2 pr-2">A continuación puedes modificar tus datos de cliente</p>               
+                                    <div class="text-left mt-4  pl-2 pr-2">
+                                        <form id="form1" method="post" action="professionals.html">
+                                        <label for="Nombre">Tu nombre</label>
+                                        <input type="text" id="Nombre" placeholder="Escribe aqu&iacute; tu nombre y apellidos" data-role="none" name="Nombre" class="form-control mb-2" required="required" />
+                                        
+                                        <label for="Apellidos">Tus apellidos</label>
+                                        <input type="text" id="Apellidos" placeholder="Escribe aqu&iacute; tus apellidos" data-role="none" name="Apellidos" class="form-control mb-2" required="required" />
+                                                                                    
+                                        
+                                        
+                                        
+                                        <label for="Empresa">Nombre de la empresa</label>
+                                        <input type="text" id="Empresa" placeholder="Debes saber que solo permitimos empresas reales y que podamos validar" data-role="none" name="Empresa" class="form-control mb-3" required="required"/>
+                                        <label for="NIF">CIF/NIF</label>
+                                        <input type="text" id="NIF" placeholder="NIF de tu actividad" data-role="none" name="NIF" class="form-control mb-2" required="required"/>
+                                        
+                                        
+                                        
+                                        
+                                        <label for="Direccion">Direcci&oacute;n de la empresa</label>
+                                        <input type="text" id="Direccion" placeholder="Deberias indicar la direcci&oacute;n de la empresa" data-role="none" name="Direccion" class="form-control mb-3" required="required"/>
+                                            
+                                        <label for="Poblacion">Poblaci&oacute;n</label>
+                                        <input type="text" id="Poblacion" placeholder="Deberias indicar la poblaci&oacute;n" data-role="none" name="Poblacion" class="form-control mb-3" required="required"/>
+                                            
+                                        <label for="CodigoPostal">C&oacute;digo Postal</label>
+                                        <input type="text" id="CodigoPostal" placeholder="Deberias indicar el c&oacute;digo postal" data-role="none" name="CodigoPostal" class="form-control mb-3" required="required"/>
+                                            
+                                        <label for="Telefono">Tel&eacute;fono</label>
+                                        <input type="text" id="Telefono" placeholder="Deberias indicar un número de tel&eacute;fono de la empresa" data-role="none" name="Telefono" class="form-control mb-3" required="required"/>
+                                            
+                                        <label for="TelefonoAlternativo">Tel&eacute;fono alternativo</label>
+                                        <input type="text" id="TelefonoAlternativo" placeholder="Puedes indicar un tel&eacute;fono alternativo para que podamos contactar m&aacute;s f&aacute;cilmente contigo" data-role="none" name="TelefonoAlternativo" class="form-control mb-3" />
+                                            
+                                        <label for="FAX">FAX</label>
+                                        <input type="text" id="FAX" placeholder="Puedes indicar un n&uacute;mero de fax, si aun dispones de uno..." data-role="none" name="FAX" class="form-control mb-3" />
+                                            
+                                        <label for="EmailAlternativo">email alternativo</label>
+                                        <input type="text" id="EmailAlternativo" placeholder="Puedes indicar un segundo email para que podamos contactar m&aacute;s f&aacute;cilmente contigo" data-role="none" name="EmailAlternativo" class="form-control mb-3"/>
+                                                                                   
+                                        
+                                        <label for="Descripcion">Describa brevemente su actividad</label>
+                                        <input type="text" id="Descripcion" placeholder="Queremos saber a que se dedica tu empresa, para confirmar que es adecuada para los servicios que ofrecemos a nuestros clientes" data-role="none" name="Descripcion" class="form-control mb-2" required="required"/>
+                                        
+                                        
+                                        <p class="text-center">
+                                            <input id="guardar" type="submit" name="paso4" class="btn btn-default superboton" value="Guardar y escoger categor&iacute;as" />
+                                        </p>
+                                        <p class="text-center mt-2">
+                                              <a href="professionals.html" class="btn btn-default superboton superbotonalter">Volver</a>
+                                        </p>
+                                        
+                                    <br /><hr /><br />
+                                    </form>
+                                    </div>
+                    </div>
+                  </div>		
+                </div>               
+                <!--ALTA CLIENTE-->
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <footer>
+            <div class="row pie">
+                <div class="col-12"></div>
+            </div>
+    </footer>
+</div>
+  
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://elmundo.webexpo.es/elmundo.js"></script>
+         
+<script type="text/javascript">
+
+   
+function actualizaDadesClient () {	
+	// Recupera los datos
+	var datosUsuario	= sessionStorage.getItem('datosUsuario');
+	var datosPassword	= sessionStorage.getItem('datosPassword');
+	
+ 	var url = "https://elmundo.webexpo.es/profesionales.php?accion=cliente&usuario=" + datosUsuario + "&password="+ datosPassword;
+	$.getJSON(url, function (mensaje, resultado) {
+		if (resultado == 'success') {
+			if (mensaje.validacion == 'ok') {
+				$("#Nombre").val(mensaje.cliente.Name);
+				$("#Apellidos").val(mensaje.cliente.Surname);
+				$("#Empresa").val(mensaje.cliente.CompanyName);
+				$("#NIF").val(mensaje.cliente.VATCode);
+				$("#Direccion").val(mensaje.cliente.BillToAddress);
+				$("#Poblacion").val(mensaje.cliente.BillToCity);
+				$("#CodigoPostal").val(mensaje.cliente.BillToZipCode);
+				$("#Telefono").val(mensaje.cliente.Phone[1]);
+				$("#TelefonoAlternativo").val(mensaje.cliente.Phone[2]);
+				$("#FAX").val(mensaje.cliente.Fax);
+				$("#EmailAlternativo").val(mensaje.cliente.Email[2]);
+				$("#Descripcion").val(mensaje.cliente.Comment);
+
+			} else {
+			alert ('La carga de datos ha producido un error y ha fallado. Error: ' + html_entity_decode(mensaje.mensaje, 'ENT_QUOTES') + '. El equipo técnico ha sido avisado para la revisión');
+			}
+		} else {
+			alert ('La carga de datos ha producido un error y ha fallado. El equipo técnico ha sido avisado para la revisión');
+		}
+	});	
+}	
+
+
+$(document).ready(function(){
+	
+	$('.error').hide();	
+
+	$('#guardar').click(function () {
+	
+	// Verificamos que los datos obligatorios e aya indicado
+	
+	//Obtenemos el valor del campo nom
+	var camp = $("input#Nombre").val();
+	//Validamos el campo nom, simplemente miramos que no esté vacío
+	if (camp == "") {
+		$("label#Nombre_error").show();
+		$("input#Nombre").focus();
+		return false;
+	}
+		
+	//Obtenemos el valor del campo Apellidos
+	var camp = $("input#Apellidos").val();
+	//Validamos el campo nom, simplemente miramos que no esté vacío
+	if (camp == "") {
+		$("label#Apellidos_error").show();
+		$("input#Apellidos").focus();
+		return false;
+	}
+	//Obtenemos el valor del campo Empresa
+	var camp = $("input#Empresa").val();
+	//Validamos el campo nom, simplemente miramos que no esté vacío
+	if (camp == "") {
+		$("label#Empresa_error").show();
+		$("input#Empresa").focus();
+		return false;
+	}
+		
+	//Obtenemos el valor del campo NIF
+	var camp = $("input#NIF").val();
+	//Validamos el campo nom, simplemente miramos que no esté vacío
+	if (camp == "") {
+		$("label#NIF_error").show();
+		$("input#NIF").focus();
+		return false;
+	}
+
+	//Obtenemos el valor del campo NIF
+	var camp = $("input#Descripcion").val();
+	//Validamos el campo nom, simplemente miramos que no esté vacío
+	if (camp == "") {
+		$("label#Descripcion_error").show();
+		$("input#Descripcion").focus();
+		return false;
+	}	
+	
+
+	// Recupera los datos
+	var datosUsuario	= sessionStorage.getItem('datosUsuario');
+	var datosPassword	= sessionStorage.getItem('datosPassword');
+	var Nombre 			= $("#Nombre").val();
+	var Apellidos		= $("#Apellidos").val();
+	var Empresa			= $("#Empresa").val();
+	var NIF				= $("#NIF").val();
+	var Direccion		= $("#Direccion").val();
+	var Poblacion		= $("#Poblacion").val();
+	var CodigoPostal	= $("#CodigoPostal").val();
+	var Telefono		= $("#Telefono").val();
+	var Telefono2 		= $("#TelefonoAlternativo").val();
+	var FAX				= $("#FAX").val();
+	var Email2			= $("#EmailAlternativo").val();
+	var Descripcion 	= $("#Descripcion").val();
+	
+	var postData = "&accion=actualizar&usuario=" + datosUsuario + "&password=" + datosPassword + "&nombre=" + Nombre + "&apellidos="+ Apellidos +"&empresa=" + Empresa + "&nif=" + NIF + "&descripcio=" + Descripcion + "&direccion=" + Direccion + "&poblacion=" + Poblacion + "&codigopostal=" + CodigoPostal + "&telefono=" + Telefono + "&telefono2=" + Telefono2 + "&fax=" + FAX + "&email2=" + Email2; 
+
+	var resultado = "";
+
+	$.ajax({
+		  type: 'POST',
+		  dataType : "json",
+		  data: postData,
+		  url: 'https://elmundo.webexpo.es/profesionales.php',
+		  async : false,
+		  success: function(data){
+			  resultado = data;
+		  },
+		  error: function(xhr, ajaxOptions, thrownError){
+			  alert('Se ha producido un error: ' + xhr.status + " " + thrownError);
+			  return false;
+		  }
+	  });
+
+	  if (resultado.validacion != 'ok')
+		  {
+		  alert('Se ha producido un error, ' + resultado.mensaje);
+		  return false;
+		  }
+
+	$('#form1').submit();
+	
+});
+                    
+	var response_estado = sessionStorage.getItem('respuestaServer.validacion');              
+	var response_url 	= sessionStorage.getItem('response.url');
+	var response_id 	= sessionStorage.getItem('respuestaServer.ide');
+	var response_nom 	= sessionStorage.getItem('respuestaServer.nom');
+	var response_cognom = sessionStorage.getItem('respuestaServer.cognom');
+	var response_nivel  = sessionStorage.getItem('respuestaServer.nivel');
+
+
+	if (response_nivel != 50)
+		{
+		window.location.href="index.html";
+		}
+
+	actualizaDadesClient();
+
+	definiciones_comunes();	
+});
+</script>
+
+
+<script>
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("active");
+});
+</script>
+
+<script>
+    function objetoAjax(){
+        var xmlhttp=false;
+        try {
+            xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+    
+        try {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        } catch (E) {
+            xmlhttp = false;
+        }
+    }
+    
+    if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+        xmlhttp = new XMLHttpRequest();
+        }
+        return xmlhttp;
+    }
+ 
+
+    function MostrarConsulta(datos){
+    divResultado = document.getElementById('resultado');
+    ajax=objetoAjax();
+    ajax.open("GET", datos);
+    ajax.onreadystatechange=function() {
+        if (ajax.readyState==4) {
+            divResultado.innerHTML = ajax.responseText
+        }
+    }
+    ajax.send(null)
+    }
+
+$('#detallID').submit(function(){
+
+
+  var postData = $(this).serialize();
+
+  $.ajax({
+
+      type: 'POST',
+
+      data: postData,
+
+      url: 'https://elmundo.webexpo.es/detall.php',
+
+      success: function(data){
+
+          console.log(data);
+
+          alert('Has confirmat la teva assist\350ncia. Contem amb t\372!!');
+window.location.reload();
+      },
+
+      error: function(){
+
+          console.log(data);
+
+          alert('There was an error adding your comment');
+
+      }
+
+  });
+
+   
+
+  return false;
+
+});
+
+    </script> 
+    
+<script src="cordova.js"></script>
+</body>
+</html>

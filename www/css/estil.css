@@ -52,6 +52,23 @@ input, textarea  {
   overflow:hidden; 
   color:#ffffff !important;
 }
+.table-striped th{font-size:12px;}
+
+.floater{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:65px;
+	right:30px;
+	background-color:rgb(47, 154, 241);
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+a:hover.floater{bottom:57px;
+	right:27px;box-shadow: 0px 0px 0px #999;}
+.floater img{margin:0 auto !important; width:55px;margin-top:4px !important;}
 
 #descripcion_alta{font-size:14px;}
 	
@@ -81,8 +98,11 @@ a.sombreado{text-shadow: 2px 2px #000;}
     width:100%;
     margin:0px;
     padding:0px;
-    background-color: #22669f;
+    background-color: #22669f;z-index:999 !important
 }
+
+#page-content-wrapper{z-index:-1}
+
 .posicionadorimg{width:90%;padding-top:8px;padding-left:0px;}
 .posicionadoricono{width:80%;padding-top:12px;float:right;}
 
@@ -107,7 +127,11 @@ a.sombreado{text-shadow: 2px 2px #000;}
 
 
 
+
 .superboton{width:100%;background-color:#406288;color:#ffffff;}
+.superbotonalter{width:100%;border:2px solid #406288; background-color:#ffffff;color:#406288 !important;}
+
+
 .botontrans{background-color:rgba(0,0,0,0.5);color:#ffffff;border:1px solid #ffffff;
 }
  
@@ -127,15 +151,62 @@ a:hover{text-decoration:none;color:#000 !important;text-shadow:none;}
 #div_Result{padding-top:30px;padding-bottom:10px;}
 .sidebar-nav h4{font-size:18px;}
 
+#altacliente label{color:#333333;font-size:12px;}
+
+
+.botonredon{
+	width:85px;
+	height:85px;
+	background-color:rgb(47, 154, 241);
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  box-shadow: 2px 2px 3px #999;
+  font-size:11px;
+  padding-top:12px;
+  line-height:12px;
+  margin:0 auto;margin-bottom:20px;
+}
+.botonredon:hover {background-color:rgb(47, 186, 241);right:2px;box-shadow: 0px 0px 0px #999;}
+.botonredon img{margin:0 auto !important; display:block; width:25px;}
 
 
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size:12px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-size:12px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-size:12px;
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-size:12px;
+}
+
+a.linktope{color:#333333 !important;}
+a:hover.linktope{color:#666666 !important;text-decoration:underline !important;}
 
 
+.botonredondo {
+  height: 68px;font-size:12px;
+  width: 68px;
+  border-radius: 50%;text-align:center;
+  background-color:red;color:#ffffff;
+  border: 0px solid red;
+}
+.MyClass{background-color:grey;}
+	.botoncuadrado {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;text-align:center;
+  background-color:#000000;;color:#ffffff;
+  border: 0px solid red;
+}
+.MyClassCua{background-color:grey;}
 
-
-
-
+.blackok{color:#000;}
 
 
 
