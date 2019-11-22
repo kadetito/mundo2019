@@ -135,50 +135,11 @@
          
 <script type="text/javascript">
 
-    $(document).ready(function(){
-        
+ 
     $('.error').hide();	
-    
     $('#guardar').click(function () {
         
-        
-        //Obtenemos el valor del campo nom
-        var camp = $("input#Nombre").val();
-        //Validamos el campo nom, simplemente miramos que no esté vacío
-        if (camp == "") {
-            $("label#Nombre_error").show();
-            $("input#Nombre").focus();
-            return false;
-        }
-            
-        //Obtenemos el valor del campo Empresa
-        var camp = $("input#Empresa").val();
-        //Validamos el campo nom, simplemente miramos que no esté vacío
-        if (camp == "") {
-            $("label#Empresa_error").show();
-            $("input#Empresa").focus();
-            return false;
-        }
-            
-        //Obtenemos el valor del campo NIF
-        var camp = $("input#NIF").val();
-        //Validamos el campo nom, simplemente miramos que no esté vacío
-        if (camp == "") {
-            $("label#NIF_error").show();
-            $("input#NIF").focus();
-            return false;
-        }
-    
-        //Obtenemos el valor del campo NIF
-        var camp = $("input#Descripcion").val();
-        //Validamos el campo nom, simplemente miramos que no esté vacío
-        if (camp == "") {
-            $("label#Descripcion_error").show();
-            $("input#Descripcion").focus();
-            return false;
-        }	
-        
-        
+
         sessionStorage.setItem('Nombre', $('#Nombre').val());
         sessionStorage.setItem('Empresa', $('#Empresa').val());
         sessionStorage.setItem('NIF', $('#NIF').val());
@@ -206,21 +167,18 @@
         $('#profesionales').show();
         }
         
- 
-    
-   
+
     function objetoAjax(){
         var xmlhttp=false;
         try {
             xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
         } catch (e) {
-     
-        try {
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        } catch (E) {
-            xmlhttp = false;
-        }
-    }
+            try {
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (E) {
+                xmlhttp = false;
+            }
+         }
      
     if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
           xmlhttp = new XMLHttpRequest();
@@ -240,14 +198,13 @@
        }
        ajax.send(null)
     }
-    </script>
-    <script>
+
+
 $("#menu-toggle").click(function(e) {
 	e.preventDefault();
 	$("#wrapper").toggleClass("active");
 });
-</script>
-<script>
+
         $(document).ready(function(){
         
             // Recuperamos datos 	
@@ -260,14 +217,13 @@ $("#menu-toggle").click(function(e) {
             var datosUsuario	= sessionStorage.getItem('datosUsuario');
             var datosPassword	= sessionStorage.getItem('datosPassword');
             
-             //if (response_estado==1){    
-                
             // Mostramos nombre del usuario                            
             $("#div_Result").html('<li class="text-center"><h4 class="datonom"> '+response_nom +' '+response_cognom+'</h4><span class="datouser">'+datosUsuario+'</span></li>'	);
             var url="https://elmundo.webexpo.es/rebote.php";
             $("#div_Result2").html("");
             
             });
+            
     </script> 
     
 <script src="cordova.js"></script>
